@@ -1,0 +1,3 @@
+C:/Users/13339/Desktop/GNSS_testmySPP/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+C:/Users/13339/Desktop/GNSS_testmySPP/app/.cxx/cmake/debug/x86/CMakeFiles/rtd.dir
+C:/Users/13339/Desktop/GNSS_testmySPP/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir

@@ -1,0 +1,6 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES :=cmr.c
+LOCAL_MODULE :=rtd
+LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+include $(BUILD_SHARED_LIBRARY)

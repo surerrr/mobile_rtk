@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\debug\\x86 --target clean"
+  ],
+  "libraries": {
+    "rtd-Debug-x86": {
+      "artifactName": "rtd",
+      "buildCommand": "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\debug\\x86 --target rtd",
+      "abi": "x86",
+      "output": "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\build\\intermediates\\cmake\\debug\\obj\\x86\\librtd.so"
+    }
+  }
+}
