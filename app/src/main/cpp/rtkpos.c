@@ -1131,14 +1131,24 @@ static int ddres(rtk_t *rtk, const nav_t *nav, double dt, const double *x,
     for (m=0;m<4;m++) /* m=0:gps/qzs/sbs,1:glo,2:gal,3:bds */
     
     for (f=opt->mode>PMODE_DGPS?0:nf;f<nf*2;f++) {
-        
+
+        rtk->sol.satnum[m]=0;
+        int satsat = 0;
+
         /* search reference satellite with highest elevation */
         for (i=-1,j=0;j<ns;j++) {
             sysi=rtk->ssat[sat[j]-1].sys;
             if (!test_sys(sysi,m)) continue;
             if (!validobs(iu[j],ir[j],f,nf,y)) continue;
-            if (i<0||azel[1+iu[j]*2]>=azel[1+iu[i]*2]) i=j;
+            if (i<0||azel[1+iu[j]*2]>=azel[1+iu[i]*2])
+            {
+                i=j;
+                satsat++;
+            }
+
         }
+        rtk->sol.satnum[m] = satsat + 1; // 多少颗卫星
+
         if (i<0) continue;
         
         /* make double difference */

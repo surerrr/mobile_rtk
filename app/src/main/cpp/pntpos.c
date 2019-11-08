@@ -376,20 +376,20 @@ static int estpos(const obsd_t *obs, int n, const double *rs, const double *dts,
             sol->satnum[2] = 0;sol->satnum[3] = 0;
             sol->satnum[4] = 0;sol->satnum[5] = 0;
 
-            for(ii = 0;ii< nv;ii++) {
-                //memset(syst,0x00, sizeof(syst));
-                sysprn = 0;
-                //syst = satno(obs[ii].sat, sysprn);
-                if (satsys(obs[ii].sat, sysprn) == SYS_GPS) {
-                    sol->satnum[0]++;
-                }
-                if (satsys(obs[ii].sat, sysprn) == SYS_GLO) {
-                    sol->satnum[2]++;
-                }
-                if (satsys(obs[ii].sat, sysprn) == SYS_CMP) {
-                    sol->satnum[1]++;
-                }
-            }
+//            for(ii = 0;ii< nv;ii++) {
+//                //memset(syst,0x00, sizeof(syst));
+//                sysprn = 0;
+//                //syst = satno(obs[ii].sat, sysprn);
+//                if (satsys(obs[ii].sat, sysprn) == SYS_GPS) {
+//                    sol->satnum[0]++;
+//                }
+//                if (satsys(obs[ii].sat, sysprn) == SYS_GLO) {
+//                    sol->satnum[2]++;
+//                }
+//                if (satsys(obs[ii].sat, sysprn) == SYS_CMP) {
+//                    sol->satnum[1]++;
+//                }
+//            }
 
             return stat;
         }

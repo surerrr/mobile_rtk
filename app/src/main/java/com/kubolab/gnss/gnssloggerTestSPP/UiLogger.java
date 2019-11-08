@@ -185,18 +185,24 @@ public class UiLogger implements GnssListener {
             }
         int DataLength=0;
             int BDSLength=0;
+        int GloLength=0;
+        int GalLength=0;
+
         for(int i=0;i<array.length;i++) {
             if (array[i][0] != null && array[i][1] != "INVALID_VALUE" && Double.parseDouble(array[i][1].substring(0, 10)) > 2000000 && array[i][1].indexOf("FIX") != 0)
             {
                 StaticGnssData.GpsS1[DataLength] = Double.parseDouble(array[i][3]);
                 if (StaticGnssData.GpsS1[DataLength] < 25) {
                     continue;
-                }
+                } // 这个其实判断的是所有系统的
+
                 Object S =array[i][0].substring(0,1);
                 String ss=(String)S;
 
                 String GPS=new String("G");
                 String BDS=new String("C");
+                String Glo=new String("R");
+                String GAL=new String("E");
 
                 if (ss.equals(GPS)) {
 //array[i][0].substring(0,1)=="G"
@@ -205,6 +211,7 @@ public class UiLogger implements GnssListener {
                     StaticGnssData.GpsC1[DataLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
 
                     StaticGnssData.GpsL1[DataLength] = Double.parseDouble(array[i][2]);
+                    StaticGnssData.GpsD1[DataLength] = Double.parseDouble(array[i][5]);
 
 
                     StaticGnssData.GPSTweek[DataLength] = (int) weekNumber;
@@ -220,18 +227,53 @@ public class UiLogger implements GnssListener {
                     StaticGnssData.BdsC1[BDSLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
 
                     StaticGnssData.BdsL1[BDSLength] = Double.parseDouble(array[i][2]);
+                    StaticGnssData.BdsD1[BDSLength] = Double.parseDouble(array[i][5]);
 
 
                     StaticGnssData.BDSTweek[ BDSLength] = (int) weekNumber;
                     StaticGnssData.BDSTsecond[ BDSLength] = tRxSeconds;
                     BDSLength++;
                 }
+                if (ss.equals(Glo)) {
+
+                    StaticGnssData.Gloprn[GloLength] = (int) Double.parseDouble(array[i][0].substring(1, 3));
+
+                    StaticGnssData.GloC1[GloLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
+
+                    StaticGnssData.GloL1[GloLength] = Double.parseDouble(array[i][2]);
+
+                    StaticGnssData.GloD1[GloLength] = Double.parseDouble(array[i][5]);
+
+
+                    StaticGnssData.GloTweek[ GloLength] = (int) weekNumber;
+                    StaticGnssData.GloTsecond[ GloLength] = tRxSeconds;
+                    GloLength++;
+                }
+
+                if (ss.equals(GAL)) {
+
+                    StaticGnssData.Galprn[GalLength] = (int) Double.parseDouble(array[i][0].substring(1, 3));
+
+                    StaticGnssData.GalC1[GalLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
+
+                    StaticGnssData.GalL1[GalLength] = Double.parseDouble(array[i][2]);
+                    StaticGnssData.GalD1[GalLength] = Double.parseDouble(array[i][5]);
+
+
+                    StaticGnssData.GalTweek[ GalLength] = (int) weekNumber;
+                    StaticGnssData.GalTsecond[ GalLength] = tRxSeconds;
+                    GalLength++;
+                }
+
+
             }
         }
 
 
         StaticGnssData.gpssvnum=DataLength;
         StaticGnssData.bdssvnum=BDSLength;
+        StaticGnssData.Glosvnum=GloLength;
+        StaticGnssData.Galsvnum=GalLength;
 
         StaticGnssData.flag = 1;
 
@@ -778,7 +820,7 @@ public class UiLogger implements GnssListener {
                     // arrayRow++;
                 }
 
-            }
+            } // 下边是单频的
             else{
                 if (Mathutil.fuzzyEquals(measurement.getCarrierFrequencyHz(), 154.0 * 10.23e6f, TOLERANCE_MHZ)) {
                     if (measurement.getConstellationType() == GnssStatus.CONSTELLATION_QZSS) {
@@ -807,14 +849,7 @@ public class UiLogger implements GnssListener {
                     } else {
                         array[arrayRow][1] = getStateName(measurement.getState());
                     }
-            /*builder.append("GNSSClock = ").append(event.getClock().getTimeNanos()).append("\n");
-            builder.append("Svid = ").append(measurement.getSvid()).append(", ");
-            builder.append("Cn0DbHz = ").append(measurement.getCn0DbHz()).append(", ");
-            builder.append("PseudoRange = ").append(prm).append("\n");
-            builder.append("tRxSeconds = ").append(tRxSeconds).append("\n");
-            builder.append("tTxSeconds = ").append(tTxSeconds).append("\n");*/
-                    //builder.append("FullCarrierCycles = ").append(measurement.getCarrierCycles() + measurement.getCarrierPhase()).append("\n");
-                  //  if (SettingsFragment.CarrierPhase == true)
+
                     if (true)
                     {
                         //Log.i("Carrier Freq",String.valueOf(measurement.getCarrierFrequencyHz()));
@@ -826,13 +861,16 @@ public class UiLogger implements GnssListener {
                             array[arrayRow][2] = "UNKNOWN";
                         } else {
                             if (measurement.getConstellationType() == GnssStatus.CONSTELLATION_GPS || measurement.getConstellationType() == GnssStatus.CONSTELLATION_GALILEO || measurement.getConstellationType() == GnssStatus.CONSTELLATION_QZSS) {
+                                array[arrayRow][5] = String.format("%14.3f", (-measurement.getPseudorangeRateMetersPerSecond())/ GPS_L1_WAVELENGTH);
                                 if (measurement.hasCarrierPhase() && measurement.hasCarrierCycles()) {
                                     array[arrayRow][2] = String.format("%14.3f", measurement.getCarrierCycles() + measurement.getCarrierPhase());
+
                                 } else {
                                     array[arrayRow][2] = String.format("%14.3f", measurement.getAccumulatedDeltaRangeMeters() / GPS_L1_WAVELENGTH);
                                 }
                             } else if (measurement.getConstellationType() == GnssStatus.CONSTELLATION_GLONASS) {
                                 if (measurement.getSvid() <= 24) {
+                                    array[arrayRow][5] = String.format("%14.3f", (-measurement.getPseudorangeRateMetersPerSecond())/ GLONASSG1WAVELENGTH(measurement.getSvid()));
                                     if (measurement.hasCarrierPhase() && measurement.hasCarrierCycles()) {
                                         array[arrayRow][2] = String.format("%14.3f", measurement.getCarrierCycles() + measurement.getCarrierPhase());
                                     } else {
@@ -843,6 +881,7 @@ public class UiLogger implements GnssListener {
                                 }
                             } else if (measurement.getConstellationType() == GnssStatus.CONSTELLATION_BEIDOU) {
                                 if (measurement.getSvid() < 30) {
+                                    array[arrayRow][5] = String.format("%14.3f", (-measurement.getPseudorangeRateMetersPerSecond())/ BEIDOUWAVELENGTH(measurement.getSvid()));
                                     if (measurement.hasCarrierPhase() && measurement.hasCarrierCycles()) {
                                         array[arrayRow][2] = String.format("%14.3f", measurement.getCarrierCycles() + measurement.getCarrierPhase());
                                     } else {
@@ -852,7 +891,7 @@ public class UiLogger implements GnssListener {
                                     array[arrayRow][2] = "NOT_SUPPORTED";
                                 }
                             }
-                        }
+                        } // 在这里上边的循环加
                         int index = measurement.getSvid();
                         if (measurement.getConstellationType() == GnssStatus.CONSTELLATION_GLONASS) {
                             index = index + 64;
@@ -894,7 +933,7 @@ public class UiLogger implements GnssListener {
 
                     array[arrayRow][4] = getCarrierFrequencyLabel(measurement.getCarrierFrequencyHz());
 
-                    array[arrayRow][5] = String.format("%2.1f", measurement.getPseudorangeRateMetersPerSecond()); //自己加的多普勒
+            //        array[arrayRow][5] = String.format("%2.1f", measurement.getPseudorangeRateMetersPerSecond()); //自己加的多普勒
 
                     arrayRow++;
                 }

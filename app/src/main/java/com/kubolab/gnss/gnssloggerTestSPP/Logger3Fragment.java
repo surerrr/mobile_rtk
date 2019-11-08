@@ -381,8 +381,8 @@ public class Logger3Fragment extends Fragment {
 
                 StaticVariable.PDOP = String.valueOf(df1.format( dop[1] ))
                         +"    GDOP: "+String.valueOf(df1.format(dop[0]));
-                StaticVariable.SatNuM = " BDS:  "+String.valueOf(df5.format(satnum[1])) +
-                        "    "+" GPS:  "+ String.valueOf(df5.format(satnum[0]));
+                StaticVariable.SatNuM = " BDS:  "+StaticGnssData.bdssvnum+"("+String.valueOf(df5.format(satnum[3]))+")" +
+                        "    "+" GPS:  "+ StaticGnssData.gpssvnum+"("+String.valueOf(df5.format(satnum[0]))+")" +"    " +" GLO:  "+ StaticGnssData.Glosvnum+ "(" +String.valueOf(df5.format(satnum[1]))+")"+"    " +" Gal:  "+ StaticGnssData.Galsvnum+ "(" +String.valueOf(df5.format(satnum[2]))+")";
 
 
                 Message msg = new Message();
@@ -417,6 +417,16 @@ public class Logger3Fragment extends Fragment {
                                         double[] gpsC2,double[] gpsL2,double[] gpsD2,
                                         double[] bdsC1,double[] bdsL1,double[] bdsD1,
                                         double[] bdsC2,double[] bdsL2,double[] bdsD2);
+
+    public native int passingobsData1JNI(int[] gloweek,double[] glosecond,
+                                         int[] galweek,double[] galsecond,
+                                         int glosvnum,double galsvnum,
+                                         int[] gloprn,int[] galprn,
+                                         int gpsflag,int bdsflag,
+                                         double[] gloC1,double[] gloL1,double[] gloD1,
+                                         double[] gloC2,double[] gloL2,double[] gloD2,
+                                         double[] galC1,double[] galL1,double[] galD1,
+                                         double[] galC2,double[] galL2,double[] galD2);
 
 
 

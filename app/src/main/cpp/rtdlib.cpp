@@ -130,8 +130,13 @@ int rtdrun(string ip_t[8],string type_t[8],string resultfilename_t)
 
     //Paths[1][1] = ":@124.205.216.26:35946/:";
     //Paths[1][1] = ":@10.26.0.100:39151/:";
-    strs[2] = atoi(type[2].c_str());
-    Paths[2][1] = ip[2];
+//    strs[2] = atoi(type[2].c_str());
+//    Paths[2][1] = ip[2];
+//
+    strs[2] =7;
+    Paths[2][1]="Example:Configs@products.igs-ip.net:2101/RTCM3EPH"; //外接星历写死
+
+
     //Paths[2][1] = ":@124.205.216.26:2103/:";
     //"cgscasm004:a97c05d@rtd.ntrip.qxwz.com:8002:RTCM32_GGB"
     // "用户名:密码@IP:PORT:/挂在点"
@@ -233,10 +238,10 @@ int rtdrun(string ip_t[8],string type_t[8],string resultfilename_t)
 //    PrcOpt.mode = PMODE_DGPS;
 
     //修改默认参数
-   PrcOpt.mode =  PMODE_KINEMA;
+   PrcOpt.mode =  PMODE_SINGLE;
 //    PrcOpt.mode = 0;
 
-    PrcOpt.navsys = SYS_GPS|SYS_CMP;
+    PrcOpt.navsys = SYS_CMP|SYS_GPS|SYS_GLO|SYS_GAL;
 //    PrcOpt.navsys = SYS_GPS;
     PrcOpt.nf = 1;
     PrcOpt.elmin = 15*D2R;

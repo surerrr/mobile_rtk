@@ -1921,82 +1921,59 @@ extern void settime(gtime_t time);
 
 
 typedef struct { ;
-    int Gpsprn_t[35];
+    int Gpsprn_t[32];
     int Bdsprn_t[35];
     int Gloprn_t[35];
     int Galprn_t[35];
 
-    double GpsC1_t[35];     //伪距
-    double GpsC2_t[35];
-    double GpsC3_t[35];
+    double GpsC1_t[32];     //伪距
+    double GpsC2_t[32];
     double BdsC1_t[35];
     double BdsC2_t[35];
-    double BdsC3_t[35];
     double GloC1_t[35];
     double GloC2_t[35];
-    double GloC3_t[35];
     double GalC1_t[35];
     double GalC2_t[35];
-    double GalC3_t[35];
 
-
-    double GpsL1_t[35];     //相位
-    double GpsL2_t[35];
-    double GpsL3_t[35];
+    double GpsL1_t[32];     //相位
+    double GpsL2_t[32];
     double BdsL1_t[35];
     double BdsL2_t[35];
-    double BdsL3_t[35];
-    double GloL1_t[35];
-    double GloL2_t[35];
-    double GloL3_t[35];
+    double GloL1_t[32];
+    double GloL2_t[32];
     double GalL1_t[35];
     double GalL2_t[35];
-    double GalL3_t[35];
 
-
-    double GpsD1_t[35];     //多普勒
-    double GpsD2_t[35];
-    double GpsD3_t[35];
+    double GpsD1_t[32];     //多普勒
+    double GpsD2_t[32];
     double BdsD1_t[35];
     double BdsD2_t[35];
-    double BdsD3_t[35];
-    double GloD1_t[35];
-    double GloD2_t[35];
-    double GloD3_t[35];
+    double GloD1_t[32];     //多普勒
+    double GloD2_t[32];
     double GalD1_t[35];
     double GalD2_t[35];
-    double GalD3_t[35];
 
+    int GPSTweek[32];                        //时间
+    double GPSTsecond[32];
 
-    double GpsS1_t[35];     //信噪比
-    double GpsS2_t[35];
-
-    double BdsS1_t[35];
-    double BdsS2_t[35];
-
-
-    int GPSTweek[35];                        //时间
-    double GPSTsecond[35];
-
-    int BDSTweek[35];                        //时间
+    int BDSTweek[35];
     double BDSTsecond[35];
 
-    int GLOTweek[35];                        //时间
-    double GLOTsecond[35];
+    int GloTweek[32];
+    double GloTsecond[32];
 
-    int GALTweek[35];                        //时间
-    double GALTsecond[35];
+    int GalTweek[32];
+    double GalTsecond[32];
 
     int gpsflag;
     int bdsflag;
-    int gloflag;
-    int galflag;
     int phoneflag;
 
     int gpsSvNum;
     int bdsSvNum;
     int gloSvNum;
     int galSvNum;
+
 }obsdata_t ;
 
 

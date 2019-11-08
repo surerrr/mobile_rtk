@@ -634,14 +634,47 @@ static void *rtksvrthread(void *arg)
                 obs.data[obs.n].sat = (unsigned char)satno(SYS_CMP,ObsData.Bdsprn_t[j]);
                 obs.data[obs.n].P[0] = ObsData.BdsC1_t[j];
                 obs.data[obs.n].L[0] = ObsData.BdsL1_t[j];
-                obs.data[obs.n].P[1] = ObsData.BdsC2_t[j];
-                obs.data[obs.n].L[1] = ObsData.BdsL2_t[j];
-                obs.data[obs.n].P[2] = ObsData.BdsC3_t[j];
-                obs.data[obs.n].L[2] = ObsData.BdsL3_t[j];
+//                obs.data[obs.n].P[1] = ObsData.BdsC2_t[j];
+//                obs.data[obs.n].L[1] = ObsData.BdsL2_t[j];
+//                obs.data[obs.n].P[2] = ObsData.BdsC3_t[j];
+//                obs.data[obs.n].L[2] = ObsData.BdsL3_t[j];
                 obs.data[obs.n].rcv =  '\x01';
                 //int2char(&obs.data[obs.n].sat,satno(SYS_CMP,ObsData.Bdsprn_t[j]));
                 obs.n++;
             }
+            for(j = 0;j<ObsData.galSvNum&&obs.n<MAXOBS*2;j++) {
+
+                gtime_t gpstTemp = gpst2time(ObsData.GalTweek[j],ObsData.GalTsecond[j]);
+                obs.data[obs.n].time.time = gpstTemp.time;
+                obs.data[obs.n].time.sec = gpstTemp.sec;
+                obs.data[obs.n].sat = (unsigned char)satno(SYS_GAL,ObsData.Galprn_t[j]);
+                obs.data[obs.n].P[0] = ObsData.GalC1_t[j];
+                obs.data[obs.n].L[0] = ObsData.GalL1_t[j];
+                obs.data[obs.n].D[0] = ObsData.GalD1_t[j];
+
+                obs.data[obs.n].P[2] = ObsData.GalC2_t[j];
+                obs.data[obs.n].L[2] = ObsData.GalL2_t[j];
+                obs.data[obs.n].D[2] = ObsData.GalD2_t[j];
+                obs.data[obs.n].rcv =  (unsigned char)1;
+                obs.n++;
+            }
+
+            for(j = 0;j<ObsData.gloSvNum&&obs.n<MAXOBS*2;j++) {
+
+                gtime_t gpstTemp = gpst2time(ObsData.GloTweek[j],ObsData.GloTsecond[j]);
+                obs.data[obs.n].time.time = gpstTemp.time;
+                obs.data[obs.n].time.sec = gpstTemp.sec;
+                obs.data[obs.n].sat = (unsigned char)satno(SYS_GLO,ObsData.Gloprn_t[j]);
+
+                obs.data[obs.n].P[0] = ObsData.GloC1_t[j];
+                obs.data[obs.n].L[0] = ObsData.GloL1_t[j];
+                obs.data[obs.n].D[0] = ObsData.GloD1_t[j];
+
+
+                obs.data[obs.n].rcv =  (unsigned char)1;
+                obs.n++;
+            }
+
 
             for (j=0;j<svr->obs[1][0].n&&obs.n<MAXOBS*2;j++) {
                 obs.data[obs.n++]=svr->obs[1][0].data[j];

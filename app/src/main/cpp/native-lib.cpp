@@ -198,10 +198,10 @@ Java_com_kubolab_gnss_gnssloggerTestSPP_Logger3Fragment_passingobsDataJNI(JNIEnv
         ObsData.GPSTsecond[i] = gpssecond[i];
         ObsData.Gpsprn_t[i] = gpsprn[i];
         ObsData.GpsC1_t[i] = gpsC1[i];
-        ObsData.GpsC2_t[i] = gpsC2[i];
+ //       ObsData.GpsC2_t[i] = gpsC2[i];
 //        ObsData.GpsC3_t[i] = gpsC3[i];
         ObsData.GpsL1_t[i] = gpsL1[i];
-        ObsData.GpsL2_t[i] = gpsL2[i];
+ //       ObsData.GpsL2_t[i] = gpsL2[i];
 //        ObsData.GpsL3_t[i] = gpsL3[i];
         ObsData.GpsD1_t[i] = gpsD1[i];
 //        ObsData.GpsD3_t[i] = gpsD3[i];
@@ -212,13 +212,13 @@ Java_com_kubolab_gnss_gnssloggerTestSPP_Logger3Fragment_passingobsDataJNI(JNIEnv
         ObsData.BDSTsecond[i] = bdssecond[i];
         ObsData.Bdsprn_t[i] = bdsprn[i];
         ObsData.BdsC1_t[i] = bdsC1[i];
-        ObsData.BdsC2_t[i] = bdsC2[i];
+ //       ObsData.BdsC2_t[i] = bdsC2[i];
 //        ObsData.BdsC3_t[i] = bdsC3[i];
         ObsData.BdsL1_t[i] = bdsL1[i];
-        ObsData.BdsL2_t[i] = bdsL2[i];
+//        ObsData.BdsL2_t[i] = bdsL2[i];
 //        ObsData.BdsL3_t[i] = bdsL3[i];
         ObsData.BdsD1_t[i] = bdsD1[i];
-        ObsData.BdsD2_t[i] = bdsD2[i];
+ //       ObsData.BdsD2_t[i] = bdsD2[i];
 //        ObsData.BdsD3_t[i] = bdsD3[i];
 
     }
@@ -274,70 +274,99 @@ Java_com_kubolab_gnss_gnssloggerTestSPP_Logger3Fragment_passingobsDataJNI(JNIEnv
     return 1;
 }extern "C"
 JNIEXPORT jint JNICALL
-Java_com_kubolab_gnss_gnssloggerTestSPP_Logger3Fragment_passingobsDataJNI1(JNIEnv *env,
-                                                                           jobject instance,
-                                                                           jintArray gpsweek_,
-                                                                           jdoubleArray gpssecond_,
-                                                                           jintArray bdsweek_,
-                                                                           jdoubleArray bdssecond_,
-                                                                           jint gpssvnum,
-                                                                           jdouble bdssvnum,
-                                                                           jintArray gpsprn_,
-                                                                           jintArray bdsprn_,
+Java_com_kubolab_gnss_gnssloggerTestSPP_Logger3Fragment_passingobsData1JNI(JNIEnv *env,
+                                                                           jobject thiz,
+                                                                           jintArray gloweek,
+                                                                           jdoubleArray glosecond,
+                                                                           jintArray galweek,
+                                                                           jdoubleArray galsecond,
+                                                                           jint glosvnum,
+                                                                           jdouble galsvnum,
+                                                                           jintArray gloprn,
+                                                                           jintArray galprn,
                                                                            jint gpsflag,
                                                                            jint bdsflag,
-                                                                           jdoubleArray gpsC1_,
-                                                                           jdoubleArray gpsL1_,
-                                                                           jdoubleArray gpsD1_,
-                                                                           jdoubleArray gpsS1_,
-                                                                           jdoubleArray gpsL2_,
-                                                                           jdoubleArray gpsD2_,
-                                                                           jdoubleArray gpsS2_,
-                                                                           jdoubleArray bdsL1_,
-                                                                           jdoubleArray bdsD1_,
-                                                                           jdoubleArray bdsS1_,
-                                                                           jdoubleArray bdsL2_,
-                                                                           jdoubleArray bdsD2_,
-                                                                           jdoubleArray bdsS2_) {
-    jint *gpsweek = env->GetIntArrayElements(gpsweek_, NULL);
-    jdouble *gpssecond = env->GetDoubleArrayElements(gpssecond_, NULL);
-    jint *bdsweek = env->GetIntArrayElements(bdsweek_, NULL);
-    jdouble *bdssecond = env->GetDoubleArrayElements(bdssecond_, NULL);
-    jint *gpsprn = env->GetIntArrayElements(gpsprn_, NULL);
-    jint *bdsprn = env->GetIntArrayElements(bdsprn_, NULL);
-    jdouble *gpsC1 = env->GetDoubleArrayElements(gpsC1_, NULL);
-    jdouble *gpsL1 = env->GetDoubleArrayElements(gpsL1_, NULL);
-    jdouble *gpsD1 = env->GetDoubleArrayElements(gpsD1_, NULL);
-    jdouble *gpsS1 = env->GetDoubleArrayElements(gpsS1_, NULL);
-    jdouble *gpsL2 = env->GetDoubleArrayElements(gpsL2_, NULL);
-    jdouble *gpsD2 = env->GetDoubleArrayElements(gpsD2_, NULL);
-    jdouble *gpsS2 = env->GetDoubleArrayElements(gpsS2_, NULL);
-    jdouble *bdsL1 = env->GetDoubleArrayElements(bdsL1_, NULL);
-    jdouble *bdsD1 = env->GetDoubleArrayElements(bdsD1_, NULL);
-    jdouble *bdsS1 = env->GetDoubleArrayElements(bdsS1_, NULL);
-    jdouble *bdsL2 = env->GetDoubleArrayElements(bdsL2_, NULL);
-    jdouble *bdsD2 = env->GetDoubleArrayElements(bdsD2_, NULL);
-    jdouble *bdsS2 = env->GetDoubleArrayElements(bdsS2_, NULL);
+                                                                           jdoubleArray glo_c1,
+                                                                           jdoubleArray glo_l1,
+                                                                           jdoubleArray glo_d1,
+                                                                           jdoubleArray glo_c2,
+                                                                           jdoubleArray glo_l2,
+                                                                           jdoubleArray glo_d2,
+                                                                           jdoubleArray gal_c1,
+                                                                           jdoubleArray gal_l1,
+                                                                           jdoubleArray gal_d1,
+                                                                           jdoubleArray gal_c2,
+                                                                           jdoubleArray gal_l2,
+                                                                           jdoubleArray gal_d2) {
+    jint *glo_week = env->GetIntArrayElements(gloweek, NULL);
+    jdouble *glo_second = env->GetDoubleArrayElements(glosecond, NULL);
+    jint *gal_week = env->GetIntArrayElements(galweek, NULL);
+    jdouble *gal_second = env->GetDoubleArrayElements(galsecond, NULL);
+    jint *glo_prn = env->GetIntArrayElements(gloprn, NULL);
+    jint *gal_prn = env->GetIntArrayElements(galprn, NULL);
+    jdouble *gloC1 = env->GetDoubleArrayElements(glo_c1, NULL);
+    jdouble *gloL1 = env->GetDoubleArrayElements(glo_l1, NULL);
+    jdouble *gloD1 = env->GetDoubleArrayElements(glo_d1, NULL);
+    jdouble *gloC2 = env->GetDoubleArrayElements(glo_c2, NULL);
+    jdouble *gloL2 = env->GetDoubleArrayElements(glo_l2, NULL);
+    jdouble *gloD2 = env->GetDoubleArrayElements(glo_d2, NULL);
+    jdouble *galC1 = env->GetDoubleArrayElements(gal_c1, NULL);
+    jdouble *galL1 = env->GetDoubleArrayElements(gal_l1, NULL);
+    jdouble *galD1 = env->GetDoubleArrayElements(gal_d1, NULL);
+    jdouble *galC2 = env->GetDoubleArrayElements(gal_c2, NULL);
+    jdouble *galL2 = env->GetDoubleArrayElements(gal_l2, NULL);
+    jdouble *galD2 = env->GetDoubleArrayElements(gal_d2, NULL);
+    // TODO: implement passingobsData1JNI()
 
-    // TODO
+    ObsData.gloSvNum = glosvnum;
+    ObsData.galSvNum = galsvnum;
 
-    env->ReleaseIntArrayElements(gpsweek_, gpsweek, 0);
-    env->ReleaseDoubleArrayElements(gpssecond_, gpssecond, 0);
-    env->ReleaseIntArrayElements(bdsweek_, bdsweek, 0);
-    env->ReleaseDoubleArrayElements(bdssecond_, bdssecond, 0);
-    env->ReleaseIntArrayElements(gpsprn_, gpsprn, 0);
-    env->ReleaseIntArrayElements(bdsprn_, bdsprn, 0);
-    env->ReleaseDoubleArrayElements(gpsC1_, gpsC1, 0);
-    env->ReleaseDoubleArrayElements(gpsL1_, gpsL1, 0);
-    env->ReleaseDoubleArrayElements(gpsD1_, gpsD1, 0);
-    env->ReleaseDoubleArrayElements(gpsS1_, gpsS1, 0);
-    env->ReleaseDoubleArrayElements(gpsL2_, gpsL2, 0);
-    env->ReleaseDoubleArrayElements(gpsD2_, gpsD2, 0);
-    env->ReleaseDoubleArrayElements(gpsS2_, gpsS2, 0);
-    env->ReleaseDoubleArrayElements(bdsL1_, bdsL1, 0);
-    env->ReleaseDoubleArrayElements(bdsD1_, bdsD1, 0);
-    env->ReleaseDoubleArrayElements(bdsS1_, bdsS1, 0);
-    env->ReleaseDoubleArrayElements(bdsL2_, bdsL2, 0);
-    env->ReleaseDoubleArrayElements(bdsD2_, bdsD2, 0);
-    env->ReleaseDoubleArrayElements(bdsS2_, bdsS2, 0);
+    for(int i = 0;i<glosvnum;i++)
+    {
+        ObsData.GloTweek[i] = glo_week[i];
+        ObsData.GloTsecond[i] = glo_second[i];
+        ObsData.Gpsprn_t[i] = glo_prn[i];
+        ObsData.GloC1_t[i] = gloC1[i];
+        ObsData.GloC2_t[i] = gloC2[i];
+        ObsData.GloL1_t[i] = gloL1[i];
+        ObsData.GloL2_t[i] = gloL2[i];
+        ObsData.GloD1_t[i] = gloD1[i];
+        ObsData.GloD2_t[i] = gloD2[i];
+    }
+    for(int i = 0;i<galsvnum;i++)
+    {
+        ObsData.GalTweek[i] = gal_week[i];
+        ObsData.GalTsecond[i] = gal_second[i];
+        ObsData.Galprn_t[i] = gal_prn[i];
+        ObsData.GalC1_t[i] = galC1[i];
+        ObsData.GalC2_t[i] = galC2[i];
+        ObsData.GalL1_t[i] = galL1[i];
+        ObsData.GalL2_t[i] = galL2[i];
+        ObsData.GalD1_t[i] = galD1[i];
+        ObsData.GalD2_t[i] = galD2[i];
+    }
+
+
+    env->ReleaseIntArrayElements(gloweek, glo_week, 0);
+    env->ReleaseDoubleArrayElements(glosecond, glo_second, 0);
+    env->ReleaseIntArrayElements(galweek, gal_week, 0);
+    env->ReleaseDoubleArrayElements(galsecond, gal_second, 0);
+    env->ReleaseIntArrayElements(gloprn, glo_prn, 0);
+    env->ReleaseIntArrayElements(galprn, gal_prn, 0);
+
+    env->ReleaseDoubleArrayElements(glo_c1 , gloC1, 0);
+    env->ReleaseDoubleArrayElements(glo_l1 , gloL1, 0);
+    env->ReleaseDoubleArrayElements(glo_d1 , gloD1, 0);
+    env->ReleaseDoubleArrayElements(glo_c2 , gloC2, 0);
+    env->ReleaseDoubleArrayElements(glo_l2 , gloL2, 0);
+    env->ReleaseDoubleArrayElements(glo_d2 , gloD2, 0);
+    env->ReleaseDoubleArrayElements(gal_c1 , galC1, 0);
+    env->ReleaseDoubleArrayElements(gal_l1 , galL1, 0);
+    env->ReleaseDoubleArrayElements(gal_d1 , galD1, 0);
+    env->ReleaseDoubleArrayElements(gal_c2 , galC2, 0);
+    env->ReleaseDoubleArrayElements(gal_l2 , galL2, 0);
+    env->ReleaseDoubleArrayElements(gal_d2 , galD2, 0);
+
+
+    return 1;
 }
