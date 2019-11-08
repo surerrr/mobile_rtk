@@ -1,5 +1,5 @@
 [1/2] Building CXX object CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o
-C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:413:59: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:414:59: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
     cmdsPeriodic[0] = cmdsPeriodic[1] = cmdsPeriodic[2] = "";
                                                           ^
 C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:191:29: warning: 'memset' call operates on objects of type 'char [3]' while the size is based on a different type 'char (*)[3]' [-Wsizeof-pointer-memaccess]

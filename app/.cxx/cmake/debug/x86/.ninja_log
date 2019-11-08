@@ -106,3 +106,6 @@
 2117	2326	0	../../../../build/intermediates/cmake/debug/obj/x86/librtd.so	71b9557d1a8d9ba3
 2	135	0	CMakeFiles/rtd.dir/src/main/cpp/rtksvr.c.o	e0e8d460082ec54
 135	252	0	../../../../build/intermediates/cmake/debug/obj/x86/librtd.so	71b9557d1a8d9ba3
+6	172	0	CMakeFiles/rtd.dir/src/main/cpp/rtksvr.c.o	e0e8d460082ec54
+2	407	0	CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o	e1beb3b0796dde8a
+407	809	0	../../../../build/intermediates/cmake/debug/obj/x86/librtd.so	71b9557d1a8d9ba3

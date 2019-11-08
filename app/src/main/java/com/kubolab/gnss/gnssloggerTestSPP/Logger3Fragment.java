@@ -212,7 +212,7 @@ public class Logger3Fragment extends Fragment {
     //        ip[2] = "Example:Configs@products.igs-ip.net:2101/RTCM3EPH:";//星历
           //  ip[2] = ":@106.53.66.239:21002/:";//改正数   //134.175.244.59
 
-                ip[1] = ":@211.101.24.55:61001/:";
+                ip[1] = ":@121.28.103.201:21011/:";
 //            inType[0] = "0";
       //      inType[2] = "7";
             inType[1] = "4";

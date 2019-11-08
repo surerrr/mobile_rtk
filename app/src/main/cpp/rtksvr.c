@@ -634,6 +634,7 @@ static void *rtksvrthread(void *arg)
                 obs.data[obs.n].sat = (unsigned char)satno(SYS_CMP,ObsData.Bdsprn_t[j]);
                 obs.data[obs.n].P[0] = ObsData.BdsC1_t[j];
                 obs.data[obs.n].L[0] = ObsData.BdsL1_t[j];
+                obs.data[obs.n].D[0] = ObsData.BdsD1_t[j];
 //                obs.data[obs.n].P[1] = ObsData.BdsC2_t[j];
 //                obs.data[obs.n].L[1] = ObsData.BdsL2_t[j];
 //                obs.data[obs.n].P[2] = ObsData.BdsC3_t[j];
@@ -651,10 +652,9 @@ static void *rtksvrthread(void *arg)
                 obs.data[obs.n].P[0] = ObsData.GalC1_t[j];
                 obs.data[obs.n].L[0] = ObsData.GalL1_t[j];
                 obs.data[obs.n].D[0] = ObsData.GalD1_t[j];
-
-                obs.data[obs.n].P[2] = ObsData.GalC2_t[j];
-                obs.data[obs.n].L[2] = ObsData.GalL2_t[j];
-                obs.data[obs.n].D[2] = ObsData.GalD2_t[j];
+//                obs.data[obs.n].P[2] = ObsData.GalC2_t[j];
+//                obs.data[obs.n].L[2] = ObsData.GalL2_t[j];
+//                obs.data[obs.n].D[2] = ObsData.GalD2_t[j];
                 obs.data[obs.n].rcv =  (unsigned char)1;
                 obs.n++;
             }

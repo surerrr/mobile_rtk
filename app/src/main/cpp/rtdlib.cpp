@@ -238,10 +238,11 @@ int rtdrun(string ip_t[8],string type_t[8],string resultfilename_t)
 //    PrcOpt.mode = PMODE_DGPS;
 
     //修改默认参数
-   PrcOpt.mode =  PMODE_SINGLE;
+   PrcOpt.mode =  PMODE_STATIC;
 //    PrcOpt.mode = 0;
 
-    PrcOpt.navsys = SYS_CMP|SYS_GPS|SYS_GLO|SYS_GAL;
+ //   PrcOpt.navsys = SYS_CMP|SYS_GPS|SYS_GLO|SYS_GAL;
+    PrcOpt.navsys = SYS_CMP|SYS_GPS|SYS_GLO;
 //    PrcOpt.navsys = SYS_GPS;
     PrcOpt.nf = 1;
     PrcOpt.elmin = 15*D2R;

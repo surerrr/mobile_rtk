@@ -1147,7 +1147,10 @@ static int ddres(rtk_t *rtk, const nav_t *nav, double dt, const double *x,
             }
 
         }
-        rtk->sol.satnum[m] = satsat + 1; // 多少颗卫星
+        if(satsat!=0)
+        {
+             rtk->sol.satnum[m] = satsat + 2;
+        }// 多少颗卫星
 
         if (i<0) continue;
         

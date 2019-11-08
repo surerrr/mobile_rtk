@@ -1,4 +1,5 @@
-[1/2] Building C object CMakeFiles/rtd.dir/src/main/cpp/rtksvr.c.o
+[1/3] Building CXX object CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o
+[2/3] Building C object CMakeFiles/rtd.dir/src/main/cpp/rtksvr.c.o
 C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtksvr.c:627:26: warning: passing 'unsigned char *' to parameter of type 'char *' converts between pointers to integer types with different sign [-Wpointer-sign]
                 int2char(&obs.data[obs.n].sat,ObsData.Gpsprn_t[j]);//GPS<U+536B><U+661F><U+53F7>
                          ^~~~~~~~~~~~~~~~~~~~
@@ -12,4 +13,20 @@ C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtksvr.c:1228:9: warning:
     str = PRN[num-1];
         ^ ~~~~~~~~~~
 3 warnings generated.
-[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86_64\librtd.so
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:414:59: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    cmdsPeriodic[0] = cmdsPeriodic[1] = cmdsPeriodic[2] = "";
+                                                          ^
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:191:29: warning: 'memset' call operates on objects of type 'char [3]' while the size is based on a different type 'char (*)[3]' [-Wsizeof-pointer-memaccess]
+    memset(&cmd,0x00,sizeof(&cmd));
+           ~~~~             ^~~~
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:191:29: note: did you mean to remove the addressof in the argument to 'sizeof' (and multiply it by the number of elements)?
+    memset(&cmd,0x00,sizeof(&cmd));
+                            ^~~~
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:192:32: warning: 'memset' call operates on objects of type 'char [3]' while the size is based on a different type 'char (*)[3]' [-Wsizeof-pointer-memaccess]
+    memset(&rcvopt,0x00,sizeof(&rcvopt));
+           ~~~~~~~             ^~~~~~~
+C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp:192:32: note: did you mean to remove the addressof in the argument to 'sizeof' (and multiply it by the number of elements)?
+    memset(&rcvopt,0x00,sizeof(&rcvopt));
+                               ^~~~~~~
+3 warnings generated.
+[3/3] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86_64\librtd.so
