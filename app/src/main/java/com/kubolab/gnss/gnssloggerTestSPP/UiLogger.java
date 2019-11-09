@@ -206,11 +206,14 @@ public class UiLogger implements GnssListener {
 
                 if (ss.equals(GPS)) {
 //array[i][0].substring(0,1)=="G"
+                    StaticGnssData.GpsL1[DataLength] = Double.parseDouble(array[i][2]);
+                    if(Math.abs(StaticGnssData.GpsL1[DataLength])<100) continue;;
+
                     StaticGnssData.Gpsprn[DataLength] = (int) Double.parseDouble(array[i][0].substring(1, 3));
 //              StaticGnssData.GpsC1[DataLength] = Double.parseDouble(array[i][1].substring(0,12));
                     StaticGnssData.GpsC1[DataLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
 
-                    StaticGnssData.GpsL1[DataLength] = Double.parseDouble(array[i][2]);
+
                     StaticGnssData.GpsD1[DataLength] = Double.parseDouble(array[i][5]);
 
 
@@ -222,11 +225,14 @@ public class UiLogger implements GnssListener {
 
                 if (ss.equals(BDS)) {
 
+                    StaticGnssData.BdsL1[BDSLength] = Double.parseDouble(array[i][2]);
+                    if(Math.abs(StaticGnssData.BdsL1[BDSLength])<100) continue;
+
                     StaticGnssData.Bdsprn[BDSLength] = (int) Double.parseDouble(array[i][0].substring(1, 3));
-//              StaticGnssData.GpsC1[DataLength] = Double.parseDouble(array[i][1].substring(0,12));
+
                     StaticGnssData.BdsC1[BDSLength] = Double.parseDouble(StringUtils.substringBefore(array[i][1], "["));
 
-                    StaticGnssData.BdsL1[BDSLength] = Double.parseDouble(array[i][2]);
+
                     StaticGnssData.BdsD1[BDSLength] = Double.parseDouble(array[i][5]);
 
 

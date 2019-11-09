@@ -112,3 +112,8 @@
 286	518	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/librtd.so	72a8da1436cea6de
 4	657	0	CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o	a91580bc77281a42
 657	851	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/librtd.so	72a8da1436cea6de
+6	354	0	CMakeFiles/rtd.dir/src/main/cpp/rtkpos.c.o	757523034551bf31
+3	489	0	CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o	a91580bc77281a42
+489	904	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/librtd.so	72a8da1436cea6de
+3	351	0	CMakeFiles/rtd.dir/src/main/cpp/rtkpos.c.o	757523034551bf31
+351	498	0	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/librtd.so	72a8da1436cea6de

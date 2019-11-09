@@ -368,9 +368,11 @@ int rtdrun(string ip_t[8],string type_t[8],string resultfilename_t)
 //        PrcOpt.rb[1] = 5180835.9775;
 //        PrcOpt.rb[2] = 2991563.9414;
 
-        PrcOpt.rb[0] = -2197956.5227;
-        PrcOpt.rb[1] = 5180832.0759;
-        PrcOpt.rb[2] = 2991562.8309;
+        PrcOpt.rb[0] = -2197958.7901;
+        PrcOpt.rb[1] = 5180836.7666;
+        PrcOpt.rb[2] = 2991565.0234;
+
+
 //        PrcOpt.rb[0] = -2198037.884000;
 //        PrcOpt.rb[1] = 5179124.776000;
 //        PrcOpt.rb[2] = 2994385.687000;  // cors

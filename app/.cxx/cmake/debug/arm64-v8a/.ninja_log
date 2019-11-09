@@ -112,3 +112,8 @@
 338	741	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/librtd.so	36824972777dc8bb
 5	1086	0	CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o	6353b7655e82416c
 1086	1360	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/librtd.so	36824972777dc8bb
+7	472	0	CMakeFiles/rtd.dir/src/main/cpp/rtkpos.c.o	fcb3dee9a0f83123
+3	622	0	CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o	6353b7655e82416c
+622	1152	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/librtd.so	36824972777dc8bb
+3	325	0	CMakeFiles/rtd.dir/src/main/cpp/rtkpos.c.o	fcb3dee9a0f83123
+326	536	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/librtd.so	36824972777dc8bb
