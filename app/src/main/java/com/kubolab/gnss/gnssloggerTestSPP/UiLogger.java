@@ -226,6 +226,7 @@ public class UiLogger implements GnssListener {
                 if (ss.equals(BDS)) {
 
                     StaticGnssData.BdsL1[BDSLength] = Double.parseDouble(array[i][2]);
+
                     if(Math.abs(StaticGnssData.BdsL1[BDSLength])<100) continue;
 
                     StaticGnssData.Bdsprn[BDSLength] = (int) Double.parseDouble(array[i][0].substring(1, 3));
