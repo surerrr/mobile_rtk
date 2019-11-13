@@ -208,6 +208,8 @@ public class Logger3Fragment extends Fragment {
                 ObsDataThread obsdataThread = new ObsDataThread();
                 obsdataThread.start();
 
+
+
 //            ip[0] = "casmigg:casmigg@58.49.58.149:2101/FFMJ1:";//观测值
     //        ip[2] = "Example:Configs@products.igs-ip.net:2101/RTCM3EPH:";//星历
           //  ip[2] = ":@106.53.66.239:21002/:";//改正数   //134.175.244.59

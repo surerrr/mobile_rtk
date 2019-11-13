@@ -42,7 +42,7 @@
 *-----------------------------------------------------------------------------*/
 #include <stdarg.h>
 #include "rtklib.h"
-
+extern obsdata_t ObsData;
 /* constants/macros ----------------------------------------------------------*/
 
 #define SQR(x)      ((x)*(x))
@@ -713,34 +713,73 @@ static void detslp_dop(rtk_t *rtk, const obsd_t *obs, int i, int rcv,
                        const nav_t *nav)
 {
     /* detection with doppler disabled because of clock-jump issue (v.2.3.0) */
-#if 0
     int f,sat=obs[i].sat;
-    double tt,dph,dpt,lam,thres;
-    
+    double tt,dph,dpt,dpp,lam,thres;
+    double a;
+
+
     trace(3,"detslp_dop: i=%d rcv=%d\n",i,rcv);
-    
+
     for (f=0;f<rtk->opt.nf;f++) {
-        if (obs[i].L[f]==0.0||obs[i].D[f]==0.0||rtk->ph[rcv-1][sat-1][f]==0.0) {
+
+        if (obs[i].P[f] == 0.0||obs[i].L[f]==0.0||obs[i].D[f]==0.0|| rtk->ssat[sat - 1].ph[rcv - 1][f] ==0.0|| rtk->ssat[sat - 1].pd[rcv - 1][f]==0.0|| rtk->ssat[sat - 1].pp[rcv - 1][f] == 0.0)
+        {
+
+        //    rtk->sol.dslip[sat - 1][rcv-1] = -10;
             continue;
         }
-        if (fabs(tt=timediff(obs[i].time,rtk->pt[rcv-1][sat-1][f]))<DTTOL) continue;
+        if (fabs(tt = timediff(obs[i].time, rtk->ssat[sat - 1].pt[rcv - 1][f])) < DTTOL)
+        {
+         //   rtk->sol.dslip[sat - 1][rcv-1] = -20;
+            continue; // 这个有问题 屏蔽了
+        }
         if ((lam=nav->lam[sat-1][f])<=0.0) continue;
-        
+
         /* cycle slip threshold (cycle) */
-        thres=MAXACC*tt*tt/2.0/lam+rtk->opt.err[4]*fabs(tt)*4.0;
-        
+        //  thres=MAXACC*tt*tt/2.0/lam+rtk->opt.err[4]*fabs(tt)*4.0;
+
         /* phase difference and doppler x time (cycle) */
-        dph=obs[i].L[f]-rtk->ph[rcv-1][sat-1][f];
-        dpt=-obs[i].D[f]*tt;
-        
-        if (fabs(dph-dpt)<=thres) continue;
-        
-        rtk->slip[sat-1][f]|=1;
-        
-        errmsg(rtk,"slip detected (sat=%2d rcv=%d L%d=%.3f %.3f thres=%.3f)\n",
-               sat,rcv,f+1,dph,dpt,thres);
+        dph=obs[i].L[f] - rtk->ssat[sat-1].ph[rcv-1][f];
+        dpt=-(obs[i].D[f]+ rtk->ssat[sat - 1].pd[rcv - 1][f])*tt*0.5;
+        dpp= obs[i].P[f] - rtk->ssat[sat - 1].pp[rcv - 1][f];
+
+        thres = 80;
+
+        if (fabs(dph - dpt) <= 50)
+        {
+            a = fabs(dph - dpt);
+
+         //   rtk->sol.dslip[sat - 1][rcv-1] = fabs(dph - dpt);
+            continue;
+        }
+        double dd = fabs(dpp / lam - dph);
+
+        //if (fabs(dpp / lam - dph) < 100)  // 这块探测钟跳 这个100是自己给的 还得改
+        //{
+        //	continue;
+        //}
+
+        if (dph> 1000000)  // 这块探测钟跳 这个100是自己给的 还得改
+        {
+            continue;
+        }
+
+//        rtk->sol.dslip[sat - 1][rcv-1] = fabs(dph - dpt);
+
+        rtk->ssat[sat - 1].slip[0] |= 1; // 这块这么改的
+
+        rtk->ssat[sat - 1].dslip_num++;
+
+
+        errmsg(rtk,"slip detected (sat=%2d rcv=%d L%d=%.3f %.3f thres=%.3f %.3f)\n",
+               sat,rcv,f+1,dph,dpt,thres,dd);
     }
-#endif
+    rtk->ssat[sat - 1].ph[rcv - 1][f - 1] = obs[i].L[f - 1];  // f-1 是因为每次都循环一次
+    rtk->ssat[sat - 1].pd[rcv - 1][f - 1] = obs[i].D[f - 1];
+    rtk->ssat[sat - 1].pp[rcv - 1][f - 1] = obs[i].P[f - 1];
+
+    // 这块f 0 1 的问题 多循环了一次
+
 }
 /* temporal update of phase biases -------------------------------------------*/
 static void udbias(rtk_t *rtk, double tt, const obsd_t *obs, const int *sat,
@@ -1149,7 +1188,9 @@ static int ddres(rtk_t *rtk, const nav_t *nav, double dt, const double *x,
         }
         if(satsat!=0)
         {
-             rtk->sol.satnum[m] = satsat + 1;
+             rtk->sol.satnum[m] = satsat;
+             rtk->sol.satnum[m] = rtk->sol.satnum[m]<4?0:rtk->sol.satnum[m];  // 这块不知道为什么会有小于4的，这样处理一下
+
         }// 多少颗卫星
 
         if (i<0) continue;
@@ -1908,7 +1949,13 @@ extern int rtkpos(rtk_t *rtk, const obsd_t *obs, int n, const nav_t *nav)
     for (nr=0;nu+nr<n&&obs[nu+nr].rcv==2;nr++) ;
     
     time=rtk->sol.time; /* previous epoch，上一历元 */
-    
+
+    for(int jj = 0;jj<6;jj++)
+    {
+        rtk->sol.satnum[jj] = 0;
+    }
+
+
     /* rover position by single point positioning伪距单点定位确定流动站坐标 */
     if (!pntpos(obs,nu,nav,&rtk->opt,&rtk->sol,NULL,rtk->ssat,msg)) {
         errmsg(rtk,"point pos error (%s)\n",msg);
