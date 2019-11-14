@@ -29,12 +29,11 @@ public class Logger3Fragment extends Fragment {
     private TextView mSensorRawGyroView;
     //private TextView mSensorRawGyroUncalibratedView;
     //----------------------------------------------------add by yanglijun
-    private EditText obsIP;
-    private EditText obsType;
+
     private EditText brdcIP;
     private EditText brdcType;
-    private EditText vrsIP;
-    private EditText vrsType;
+    private EditText baseIP;
+    private EditText baseType;
     private Button OK;
     private Button runButton;
 
@@ -104,11 +103,11 @@ public class Logger3Fragment extends Fragment {
 
 //----------------------------add by yanglijun
         //setContentView(R.layout.fragment_log3);
-        obsIP   = (EditText) view.findViewById(R.id.obsip);
+
 //        obsType = (EditText)findViewById(R.id.obstype);
-        vrsIP   = (EditText)view.findViewById(R.id.vrsip);
-        vrsType = (EditText)view.findViewById(R.id.vrstype);
+
         brdcIP   = (EditText)view.findViewById(R.id.brdcip);
+        baseIP   = (EditText)view.findViewById(R.id.baseip);
 //        brdcType = (EditText)findViewById(R.id.brdctype);
 
 
@@ -119,8 +118,8 @@ public class Logger3Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                StaticVariable.obsType = obsType.getText().toString();
-                StaticVariable.vrsType = vrsType.getText().toString();
-//                StaticVariable.brdcType = brdcType.getText().toString();
+            //    StaticVariable.baseType = baseType.getText().toString();
+             //   StaticVariable.brdcType = brdcType.getText().toString();
 
 //                if(StaticVariable.obsType.equals( Tcpip )){
 //                    StaticVariable.obsIP = ":@" + obsIP.getText().toString() + "/:";
@@ -128,17 +127,13 @@ public class Logger3Fragment extends Fragment {
 //                    StaticVariable.obsIP = obsIP.getText().toString();
 //                }
 
-                if(StaticVariable.vrsType.equals( Tcpip )){
-                    StaticVariable.vrsIP  = ":@" + vrsIP.getText().toString()+"/:";
-                }else if(StaticVariable.obsType.equals( Ntrip )) {
-                    StaticVariable.obsIP = vrsIP.getText().toString();
-                }
 
-//                if(StaticVariable.brdcType.equals( Tcpip )) {
-//                    StaticVariable.brdcIP = brdcIP.getText().toString();
-//                }else if(StaticVariable.obsType.equals( Ntrip )) {
-//                    StaticVariable.obsIP = brdcIP.getText().toString();
-//                }
+                    StaticVariable.baseIP  = ":@" + baseIP.getText().toString()+"/:";
+
+
+
+                    StaticVariable.brdcIP = ":@" +brdcIP.getText().toString()+"/:";
+
             }
 
         });
@@ -149,7 +144,7 @@ public class Logger3Fragment extends Fragment {
    //     startGetData();
 
         //创建结果存放位置
-        String mPath = "/storage/self/primary/ALaas";
+        String mPath = "/storage/self/primary/Alaas";
         File file = new File(mPath);
         if (!file.exists()) {
             file.mkdir();
@@ -176,10 +171,10 @@ public class Logger3Fragment extends Fragment {
             public void onClick(View view) {
                 TcpPath tcpPath = new TcpPath();
                 tcpPath.IP[0] = StaticVariable.obsIP;
-                tcpPath.IP[1] = StaticVariable.vrsIP;
+                tcpPath.IP[1] = StaticVariable.baseIP;
                 tcpPath.IP[2] = StaticVariable.brdcIP;
                 tcpPath.PORT[0] = StaticVariable.obsType;
-                tcpPath.PORT[1] = StaticVariable.vrsType;
+                tcpPath.PORT[1] = StaticVariable.baseType;
                 tcpPath.PORT[2] = StaticVariable.brdcType;
 
                 String[] ip = new String[8];
@@ -194,11 +189,11 @@ public class Logger3Fragment extends Fragment {
                         +String.valueOf(df3.format(calendar.get(Calendar.DAY_OF_MONTH)))
                         +String.valueOf(df3.format(calendar.get(Calendar.HOUR_OF_DAY)))
                         +String.valueOf(df3.format(calendar.get(Calendar.MINUTE)))
-                        +String.valueOf("TestSPP")
+                        +String.valueOf("Mobile_RTK")
                         +String.valueOf(".txt");
 
 //                ip[0] = StaticVariable.obsIP;
-//                ip[1] = StaticVariable.vrsIP;
+                  ip[1] = StaticVariable.baseIP;
 //                ip[2] = StaticVariable.brdcIP;
 //                inType[0] = "4";
 //                inType[1] = "4";

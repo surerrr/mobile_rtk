@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\CMakeLists.txt"
+    "C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\debug\\arm64-v8a --target clean"
+    "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\.cxx\\cmake\\debug\\arm64-v8a --target clean"
   ],
   "libraries": {
     "rtd-Debug-arm64-v8a": {
       "artifactName": "rtd",
-      "buildCommand": "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\debug\\arm64-v8a --target rtd",
+      "buildCommand": "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\.cxx\\cmake\\debug\\arm64-v8a --target rtd",
       "abi": "arm64-v8a",
-      "output": "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\librtd.so"
+      "output": "C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\librtd.so"
     }
   }
 }

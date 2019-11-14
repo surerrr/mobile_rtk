@@ -25,8 +25,8 @@ public class StaticVariable {
     public static String obsType;
     public static String brdcIP;
     public static String brdcType;
-    public static String vrsIP;
-    public static String vrsType;
+    public static String baseIP;
+    public static String baseType;
 
 }
 

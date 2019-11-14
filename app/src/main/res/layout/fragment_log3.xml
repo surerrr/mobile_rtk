@@ -14,19 +14,18 @@
 
 
         <TextView
+            android:id="@+id/BaseTcpView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ObsTcpView"
-            android:text="观测值："
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
-            />
+            android:text="参考站：" />
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/obsip"
-            android:layout_toRightOf="@id/ObsTcpView"
+            android:id="@+id/baseip"
+            android:layout_toRightOf="@id/BaseTcpView"
             android:text="106.53.66.239:11001"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -52,31 +51,6 @@
             android:layout_marginRight="30dp"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/vrsTCPView"
-            android:text="参考站："
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/vrsip"
-            android:text="106.53.66.239:21002"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/vrstype"
-            android:text="4"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            />
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp">

@@ -255,7 +255,7 @@ int rtdrun(string ip_t[8],string type_t[8],string resultfilename_t)
     {
             PrcOpt.snrmask.mask[i][j]=0;
         }
-    PrcOpt.dynamics =0; // 静态
+    PrcOpt.dynamics =1; // 静态
 
     PrcOpt.tidecorr =0;
 

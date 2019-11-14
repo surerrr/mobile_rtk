@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\13339\Desktop\GNSS_testmySPP\app\.cxx\cmake\release\x86 && C:\Users\13339\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -HC:\Users\13339\Desktop\GNSS_testmySPP\app -BC:\Users\13339\Desktop\GNSS_testmySPP\app\.cxx\cmake\release\x86"
+  COMMAND = cmd.exe /C "cd /D C:\Users\13339\Desktop\mobile_rtk\app\.cxx\cmake\release\x86 && C:\Users\13339\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -HC:\Users\13339\Desktop\mobile_rtk\app -BC:\Users\13339\Desktop\mobile_rtk\app\.cxx\cmake\release\x86"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -46,350 +46,350 @@ build CMakeFiles/rtd.dir/src/main/cpp/phoneObsData.cpp.o: CXX_COMPILER__rtd ../.
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\phoneObsData.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\phoneObsData.cpp
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\phoneObsData.cpp
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__rtd ../../../../src/main/cpp/native-lib.cpp
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\native-lib.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\native-lib.cpp
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\native-lib.cpp
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o: CXX_COMPILER__rtd ../../../../src/main/cpp/rtdlib.cpp
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtdlib.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtdlib.cpp
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/binex.c.o: C_COMPILER__rtd ../../../../src/main/cpp/binex.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\binex.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\binex.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\binex.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/cmr.c.o: C_COMPILER__rtd ../../../../src/main/cpp/cmr.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\cmr.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\cmr.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\cmr.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/convgpx.c.o: C_COMPILER__rtd ../../../../src/main/cpp/convgpx.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\convgpx.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\convgpx.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\convgpx.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/convkml.c.o: C_COMPILER__rtd ../../../../src/main/cpp/convkml.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\convkml.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\convkml.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\convkml.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/convrnx.c.o: C_COMPILER__rtd ../../../../src/main/cpp/convrnx.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\convrnx.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\convrnx.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\convrnx.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/crescent.c.o: C_COMPILER__rtd ../../../../src/main/cpp/crescent.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\crescent.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\crescent.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\crescent.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/datum.c.o: C_COMPILER__rtd ../../../../src/main/cpp/datum.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\datum.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\datum.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\datum.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/download.c.o: C_COMPILER__rtd ../../../../src/main/cpp/download.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\download.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\download.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\download.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ephemeris.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ephemeris.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ephemeris.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ephemeris.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ephemeris.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/geoid.c.o: C_COMPILER__rtd ../../../../src/main/cpp/geoid.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\geoid.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\geoid.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\geoid.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/gis.c.o: C_COMPILER__rtd ../../../../src/main/cpp/gis.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\gis.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\gis.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\gis.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/gw10.c.o: C_COMPILER__rtd ../../../../src/main/cpp/gw10.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\gw10.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\gw10.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\gw10.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ionex.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ionex.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ionex.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ionex.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ionex.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/javad.c.o: C_COMPILER__rtd ../../../../src/main/cpp/javad.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\javad.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\javad.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\javad.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/lambda.c.o: C_COMPILER__rtd ../../../../src/main/cpp/lambda.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\lambda.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\lambda.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\lambda.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/novatel.c.o: C_COMPILER__rtd ../../../../src/main/cpp/novatel.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\novatel.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\novatel.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\novatel.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/nvs.c.o: C_COMPILER__rtd ../../../../src/main/cpp/nvs.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\nvs.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\nvs.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\nvs.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/options.c.o: C_COMPILER__rtd ../../../../src/main/cpp/options.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\options.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\options.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\options.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/pntpos.c.o: C_COMPILER__rtd ../../../../src/main/cpp/pntpos.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\pntpos.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\pntpos.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\pntpos.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/postpos.c.o: C_COMPILER__rtd ../../../../src/main/cpp/postpos.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\postpos.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\postpos.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\postpos.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ppp.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ppp.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ppp.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ppp.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ppp.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ppp_ar.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ppp_ar.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ppp_ar.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ppp_ar.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ppp_ar.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ppp_corr.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ppp_corr.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ppp_corr.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ppp_corr.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ppp_corr.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/preceph.c.o: C_COMPILER__rtd ../../../../src/main/cpp/preceph.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\preceph.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\preceph.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\preceph.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/qzslex.c.o: C_COMPILER__rtd ../../../../src/main/cpp/qzslex.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\qzslex.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\qzslex.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\qzslex.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rcvlex.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rcvlex.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rcvlex.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rcvlex.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rcvlex.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rcvraw.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rcvraw.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rcvraw.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rcvraw.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rcvraw.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rinex.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rinex.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rinex.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rinex.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rinex.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rt17.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rt17.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rt17.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rt17.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rt17.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtcm.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtcm.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtcm.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtcm.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtcm.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtcm2.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtcm2.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtcm2.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtcm2.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtcm2.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtcm3.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtcm3.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtcm3.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtcm3.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtcm3.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtcm3e.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtcm3e.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtcm3e.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtcm3e.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtcm3e.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtkcmn.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtkcmn.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtkcmn.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtkcmn.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtkcmn.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtkpos.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtkpos.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtkpos.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtkpos.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtkpos.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/rtksvr.c.o: C_COMPILER__rtd ../../../../src/main/cpp/rtksvr.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\rtksvr.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\rtksvr.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtksvr.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/sbas.c.o: C_COMPILER__rtd ../../../../src/main/cpp/sbas.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\sbas.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\sbas.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\sbas.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/septentrio.c.o: C_COMPILER__rtd ../../../../src/main/cpp/septentrio.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\septentrio.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\septentrio.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\septentrio.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/skytraq.c.o: C_COMPILER__rtd ../../../../src/main/cpp/skytraq.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\skytraq.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\skytraq.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\skytraq.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/solution.c.o: C_COMPILER__rtd ../../../../src/main/cpp/solution.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\solution.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\solution.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\solution.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ss2.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ss2.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ss2.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ss2.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ss2.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/stream.c.o: C_COMPILER__rtd ../../../../src/main/cpp/stream.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\stream.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\stream.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\stream.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/streamsvr.c.o: C_COMPILER__rtd ../../../../src/main/cpp/streamsvr.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\streamsvr.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\streamsvr.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\streamsvr.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/tersus.c.o: C_COMPILER__rtd ../../../../src/main/cpp/tersus.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\tersus.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\tersus.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\tersus.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/tides.c.o: C_COMPILER__rtd ../../../../src/main/cpp/tides.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\tides.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\tides.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\tides.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/tle.c.o: C_COMPILER__rtd ../../../../src/main/cpp/tle.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\tle.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\tle.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\tle.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 build CMakeFiles/rtd.dir/src/main/cpp/ublox.c.o: C_COMPILER__rtd ../../../../src/main/cpp/ublox.c
   DEFINES = -Drtd_EXPORTS
   DEP_FILE = CMakeFiles\rtd.dir\src\main\cpp\ublox.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\13339\Desktop\GNSS_testmySPP\app\src\main\cpp\ublox.c
+  IN_ABS = C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\ublox.c
   OBJECT_DIR = CMakeFiles\rtd.dir
   OBJECT_FILE_DIR = CMakeFiles\rtd.dir\src\main\cpp
 
@@ -416,7 +416,7 @@ build ../../../../build/intermediates/cmake/release/obj/x86/librtd.so: CXX_SHARE
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\13339\Desktop\GNSS_testmySPP\app\.cxx\cmake\release\x86 && C:\Users\13339\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\13339\Desktop\mobile_rtk\app\.cxx\cmake\release\x86 && C:\Users\13339\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util

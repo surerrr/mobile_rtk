@@ -1,1 +1,18 @@
-ninja: no work to do.
+[1/2] Building CXX object CMakeFiles/rtd.dir/src/main/cpp/rtdlib.cpp.o
+C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp:416:59: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+    cmdsPeriodic[0] = cmdsPeriodic[1] = cmdsPeriodic[2] = "";
+                                                          ^
+C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp:191:29: warning: 'memset' call operates on objects of type 'char [3]' while the size is based on a different type 'char (*)[3]' [-Wsizeof-pointer-memaccess]
+    memset(&cmd,0x00,sizeof(&cmd));
+           ~~~~             ^~~~
+C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp:191:29: note: did you mean to remove the addressof in the argument to 'sizeof' (and multiply it by the number of elements)?
+    memset(&cmd,0x00,sizeof(&cmd));
+                            ^~~~
+C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp:192:32: warning: 'memset' call operates on objects of type 'char [3]' while the size is based on a different type 'char (*)[3]' [-Wsizeof-pointer-memaccess]
+    memset(&rcvopt,0x00,sizeof(&rcvopt));
+           ~~~~~~~             ^~~~~~~
+C:\Users\13339\Desktop\mobile_rtk\app\src\main\cpp\rtdlib.cpp:192:32: note: did you mean to remove the addressof in the argument to 'sizeof' (and multiply it by the number of elements)?
+    memset(&rcvopt,0x00,sizeof(&rcvopt));
+                               ^~~~~~~
+3 warnings generated.
+[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\librtd.so

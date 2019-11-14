@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\CMakeLists.txt"
+    "C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\release\\armeabi-v7a --target clean"
+    "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\.cxx\\cmake\\release\\armeabi-v7a --target clean"
   ],
   "libraries": {
     "rtd-Release-armeabi-v7a": {
       "artifactName": "rtd",
-      "buildCommand": "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\.cxx\\cmake\\release\\armeabi-v7a --target rtd",
+      "buildCommand": "C:\\Users\\13339\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\.cxx\\cmake\\release\\armeabi-v7a --target rtd",
       "abi": "armeabi-v7a",
-      "output": "C:\\Users\\13339\\Desktop\\GNSS_testmySPP\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\librtd.so"
+      "output": "C:\\Users\\13339\\Desktop\\mobile_rtk\\app\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\librtd.so"
     }
   }
 }

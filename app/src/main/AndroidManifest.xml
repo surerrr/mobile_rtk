@@ -31,13 +31,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/kubolab"
+        android:icon="@mipmap/ui"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateAlwaysHidden">
         <activity
             android:name="com.kubolab.gnss.gnssloggerTestSPP.MainActivity"
-            android:label="TestSPP"
+            android:label="Mobile_RTK"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
